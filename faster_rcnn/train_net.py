@@ -13,6 +13,7 @@ import pprint
 import numpy as np
 import pdb
 import sys
+import os
 import os.path
 
 this_dir = os.path.dirname(__file__)
@@ -70,6 +71,7 @@ def parse_args():
     return args
 
 if __name__ == '__main__':
+    os.environ["CUDA_VISIBLE_DEVICES"] = "3"
     args = parse_args()
 
     print('Called with args:')
